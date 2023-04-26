@@ -18,7 +18,7 @@ $(document).ready(function() {
                 //console.log(data);
                 data.forEach(element => {
                     console.log(element);
-                        $('#cards_to_add').append('<div class="card m-2" style="width: 18rem;"> <div class="card-header">Viaggio</div><ul class="list-group list-group-flush"><li class="list-group-item">Partenza: '+element['partenza']+'</li><li class="list-group-item">Destinazione: '+element['destinazione']+'</li><li class="list-group-item">Ora: '+element['dt_viaggio']+'</li><li class="list-group-item">Durata: '+element['durata']+'<li class="list-group-item">Numero di posti: '+element['n_posti']+'<li class="list-group-item">Costo: '+element['importo']+' €</ul><div class="card-footer row"><div class="col"><button class="btn btn-primary">Prenota</button></div></div></div>'); 
+                        $('#cards_to_add').append('<div class="row"><div class="col-8"><div class="card m-2"><div class="card-header">Viaggio</div><ul class="list-group list-group-flush"><li class="list-group-item"><div class="row"><div class="col">Partenza: '+element['partenza']+'</div><div class="col">Destinazione: '+element['destinazione']+'</div></div></li><li class="list-group-item">Ora: '+element['dt_viaggio']+'</li><li class="list-group-item">Durata: '+element['durata']+'<li class="list-group-item">Numero di posti: '+element['n_posti']+'<li class="list-group-item">Costo: '+element['importo']+' €<li class="list-group-item">Autista: '+element['nominativo']+'</ul><div class="card-footer"><button class="btn btn-primary" style="width: 100%;">Prenota</button></div></div></div></div>'); 
                 });
                 },
             error: (data)=> {

@@ -6,8 +6,8 @@
     $dt_viaggio=$_POST['dt_viaggio'];
     $n_posti=$_POST['n_posti'];
 
-    $sql="SELECT partenza, destinazione, time(dt_viaggio) AS dt_viaggio, durata, n_posti, importo  
-            FROM viaggi 
+    $sql="SELECT partenza, destinazione, time(dt_viaggio) AS dt_viaggio, durata, n_posti, importo, nominativo
+            FROM viaggi INNER JOIN autisti ON viaggi.id_autista=autisti.id
             WHERE partenza LIKE '%Legnano%' AND destinazione LIKE '%Milano%' AND dt_viaggio LIKE '%$dt_viaggio%' AND n_posti>=1";
 
     $result=$conn->query($sql);

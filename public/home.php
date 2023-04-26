@@ -27,9 +27,12 @@
     </nav>
     <!-- NAVBAR -->
 
-    <div id="cards_to_add">
-    <!-- <div class="card" style="width: 18rem;"> <div class="card-header">Viaggio</div><ul class="list-group list-group-flush"><li class="list-group-item">Partenza: '+data['partenza']+'</li><li class="list-group-item">Destinazione: '+data['destinazione']+'</li><li class="list-group-item">Data: '+data['dt_viaggio']+'</li><li class="list-group-item">Durata: '+data['durata']+'<li class="list-group-item">Numero di posti: '+data['n_posti']+'<li class="list-group-item">Costo: '+data['importo']+' €</ul><div class="card-footer row"><div class="col"><input class="form-control" type="number" placeholder="Passeggeri" min="1" max="10" step="1"></div><div class="col"><button class="btn btn-primary">Prenota</button></div></div></div> -->
-    </div>
+    <div class="row">
+        <div id="filter" class="col-4"></div>
+        <div id="cards_to_add" class="col-8">
+            <!-- <div class="card" style="width: 18rem;"> <div class="card-header">Viaggio</div><ul class="list-group list-group-flush"><li class="list-group-item">Partenza: '+data['partenza']+'</li><li class="list-group-item">Destinazione: '+data['destinazione']+'</li><li class="list-group-item">Data: '+data['dt_viaggio']+'</li><li class="list-group-item">Durata: '+data['durata']+'<li class="list-group-item">Numero di posti: '+data['n_posti']+'<li class="list-group-item">Costo: '+data['importo']+' €</ul><div class="card-footer row"><div class="col"><input class="form-control" type="number" placeholder="Passeggeri" min="1" max="10" step="1"></div><div class="col"><button class="btn btn-primary">Prenota</button></div></div></div> -->
+        </div>
+   </div>
 
     <!-- BOOTSTRAP JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
