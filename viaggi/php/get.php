@@ -6,7 +6,7 @@
     $dt_viaggio=$_POST['dt_viaggio'];
     $n_posti=$_POST['n_posti'];
 
-    $sql="SELECT * 
+    $sql="SELECT partenza, destinazione, time(dt_viaggio) AS dt_viaggio, durata, n_posti, importo  
             FROM viaggi 
             WHERE partenza LIKE '%Legnano%' AND destinazione LIKE '%Milano%' AND dt_viaggio LIKE '%$dt_viaggio%' AND n_posti>=1";
 
@@ -14,13 +14,7 @@
     $data=array();
 
     while($row=$result->fetch_assoc()) {
-        $data['partenza']=$row['partenza'];
-        $data['destinazione']=$row['destinazione'];
-        $data['dt_viaggio']=$row['dt_viaggio'];
-        $data['durata']=$row['durata'];
-        $data['n_posti']=$row['n_posti'];
-        $data['importo']=$row['importo'];
-
+        $data[]=$row;
         /* echo "<br/>";
         echo "Partenza: ".$row['partenza']."<br/>";
         echo "Destinazione: ".$row['destinazione']."<br/>";
